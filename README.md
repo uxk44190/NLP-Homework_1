@@ -1,7 +1,7 @@
 # NLP-Homework_1
 
 ---
-# 2.2 Mini BPE Learner 
+## 2.2 Mini BPE Learner 
 
 The code:
 - Takes a small text corpus as input
@@ -13,9 +13,8 @@ The code:
 
 The script is written in a **single file** and uses only standard Python libraries (`collections.Counter`).
 
----
 
-## How the Code is Structured
+### How the Code is Structured
 
 - **Tokenization functions**  
   Convert words into character lists with `_` at the end.
@@ -32,8 +31,8 @@ The script is written in a **single file** and uses only standard Python librari
 - **Segmentation function**  
   Applies the learned merges to split new words into subword tokens.
 
----
-## What the Output Shows
+
+### What the Output Shows
 
 - Step-by-step BPE merge process, displaying:
   - the most frequent adjacent symbol pair at each step
@@ -45,6 +44,9 @@ The script is written in a **single file** and uses only standard Python librari
   - `lowest`
   - `widest`
   - an invented word (e.g., `newestest`)
+
+### 2.2.3--
+  Subword tokens help with the out-of-vocabulary (OOV) problem because they allow the model to break unknown words into smaller parts that it already knows. Instead of treating a new word as completely unknown, the model represents it using familiar subwords. For example, a word like *newestest* may not appear in the training data, but it can still be split into known parts such as *new* and *est*. This helps the model understand and process new words more easily. One example of a meaningful subword learned by BPE is **er_**, which appears in words like *newer* and *wider*. This subword matches the English suffix “-er,” showing that BPE can learn useful word parts that have real meaning.
 
 
 
