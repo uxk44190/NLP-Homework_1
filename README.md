@@ -33,14 +33,19 @@ The script is written in a **single file** and uses only standard Python librari
   Applies the learned merges to split new words into subword tokens.
 
 ---
+## What the Output Shows
 
-## How to Run the Code
+- Step-by-step BPE merge process, displaying:
+  - the most frequent adjacent symbol pair at each step
+  - the vocabulary size after each merge
 
-Requirements:
-- Python 3
+- Final segmentation results for example words, including:
+  - `new`
+  - `newer`
+  - `lowest`
+  - `widest`
+  - an invented word (e.g., `newestest`)
 
-Run:
-```bash
-python mini_bpe.py
+
 
 
