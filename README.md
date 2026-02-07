@@ -1,7 +1,7 @@
 # NLP-Homework_1
 
 ---
-# Mini BPE Learner 
+# 2.2 Mini BPE Learner 
 
 The code:
 - Takes a small text corpus as input
