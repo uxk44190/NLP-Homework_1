@@ -79,6 +79,21 @@ The code:
 
 ---
 # Question 5
+
+## — Tokenization Comparison (Naive vs Manual vs Tool)
+
+
+This code demonstrates three different ways to tokenize a short English paragraph and compares their results:
+1. **Naïve tokenization** using simple space splitting.
+2. **Manual tokenization** where punctuation and common English clitics (like `'s`, `'m`, `n't`) are handled explicitly using rules.
+3. **Tool-based tokenization** using **NLTK**, a standard NLP library.
+
+The code also compares **manual tokens vs tool tokens** and highlights where they differ.
+
+## Input Paragraph
+A short paragraph with punctuation, contractions, and a multiword expression:
+
+
 ## 5.3 Multiword Expressions (MWEs) — at least 3
 
 - **New York City** (place name)
@@ -87,6 +102,7 @@ The code:
 - The phrase means “quickly/urgent” as a unit; splitting can lose the phrase-level meaning.
 - **by the way** (fixed discourse phrase)
 - It works as a single conversational unit (used to change topic), so treating it as one token can help models understand intent.
+
 
 ## 5.4 What was the hardest part of tokenization in your language?
 The hardest part of tokenization was dealing with punctuation and contractions like can’t, won’t, and I’m, because they look like one word but contain extra meaning. Another difficult part was handling words with apostrophes like Chicago’s and friend’s, because you must decide if 's should be separated. Tokenization in English is usually easier than in languages with heavy word endings, but English still has issues with clitics, hyphens, and punctuation. Multiword expressions are also tricky because tokenizers often split them even when they represent one meaning. Yes, punctuation and MWEs make tokenization more difficult because they create cases where “one meaning” is spread across multiple tokens. Manual correction helps, but it takes time and depends on the rules you choose.
