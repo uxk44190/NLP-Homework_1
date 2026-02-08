@@ -51,9 +51,9 @@ The script is written in a **single file** and uses only standard Python librari
 ---
 # 2.3 BPE learner in your own language/english
 
-## Mini BPE Learner (Q2.3)
 
-This project contains a **short and clean Python script** that trains a mini BPE model on a small English paragraph.
+
+This model contains a **short and clean Python script** that trains a mini BPE model on a small English paragraph.
 
 The code:
 - Cleans the text (removes punctuation and lowercases words)
