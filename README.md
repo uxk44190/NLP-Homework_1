@@ -64,7 +64,6 @@ The code:
 - Segments 5 example words, including a rare word and a derived word
 
 ### what the output shows
-
 - Step-by-step BPE merge process (each step prints the most frequent pair merged)
 - Top 5 most frequent merges (shown after training)
 - Five longest learned subword tokens (from the final vocabulary)
