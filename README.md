@@ -77,6 +77,19 @@ The code:
  ## 2.3.4 (	What kinds of subwords were learned (prefixes, suffixes, stems, whole words?	Two concrete pros/cons of subword tokenization for your language)
  The BPE model learned different types of subwords such as full words, word stems, and common suffixes. Some words became single tokens, while others were split into smaller parts that appear often in the text. Suffixes like -ing and -tion were learned because they are common in English words. One advantage of subword tokenization is that it can handle new or unseen words by breaking them into known parts. Another advantage is that it keeps the vocabulary size smaller, which makes models more efficient. A disadvantage is that words can be split into many pieces, making sentences longer. Another drawback is that subwords do not always match real grammar or meaning perfectly.
 
+---
+# Question 5
+## 5.3 Multiword Expressions (MWEs) — at least 3
+
+- **New York City** (place name)
+- Should be one token because it refers to one location, not three separate meanings.
+- **in a hurry** (fixed phrase)
+- The phrase means “quickly/urgent” as a unit; splitting can lose the phrase-level meaning.
+- **by the way** (fixed discourse phrase)
+- It works as a single conversational unit (used to change topic), so treating it as one token can help models understand intent.
+
+## 5.4 What was the hardest part of tokenization in your language?
+The hardest part of tokenization was dealing with punctuation and contractions like can’t, won’t, and I’m, because they look like one word but contain extra meaning. Another difficult part was handling words with apostrophes like Chicago’s and friend’s, because you must decide if 's should be separated. Tokenization in English is usually easier than in languages with heavy word endings, but English still has issues with clitics, hyphens, and punctuation. Multiword expressions are also tricky because tokenizers often split them even when they represent one meaning. Yes, punctuation and MWEs make tokenization more difficult because they create cases where “one meaning” is spread across multiple tokens. Manual correction helps, but it takes time and depends on the rules you choose.
 
 
 
